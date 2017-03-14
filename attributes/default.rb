@@ -99,6 +99,7 @@ default['mariadb']['innodb']['options'] = {}
 #
 default['mariadb']['galera']['cluster_name'] = 'galera_cluster'
 default['mariadb']['galera']['cluster_search_query'] = ''
+default['mariadb']['galera']['replication_port'] = '4567'
 # All Galera nodes should get the same server_id
 default['mariadb']['galera']['server_id']          = '100'
 default['mariadb']['galera']['wsrep_sst_method']   = 'rsync'
