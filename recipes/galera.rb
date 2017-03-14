@@ -110,7 +110,7 @@ if node['mariadb']['galera']['gcomm_address'].nil?
   galera_cluster_nodes.each do |lnode|
     next unless lnode.name != node.name
     gcomm += ',' unless first
-    gcomm += lnode['fqdn']
+    gcomm += "#{lnode['fqdn']}:#{node['mariadb']['galera']['replication_port']}"
     first = false
   end
 else
